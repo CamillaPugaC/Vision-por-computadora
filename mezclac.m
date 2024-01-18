@@ -1,0 +1,16 @@
+pkg load image;
+clear; clc;
+im = imread('cisco1.jpg');
+figure;
+imshow(im);
+im2 = imread('cisco2.jpeg');
+figure;
+imshow(im2);
+disp('Tamaño de im ');
+disp(size(im));
+disp('Tamaño de im2 ');
+disp(size(im2));
+im3 = imresize(im2, size(im)(1:2));
+mezcla = (0.8.*im) + (0.2.*im3);
+figure;
+imshow(mezcla);

@@ -1,0 +1,16 @@
+clear; clc;
+im = imread('cisco2.jpeg');
+figure;
+imshow(im);
+disp(size(im));
+disp(class(im));
+info = imfinfo('Cisco2.jpeg');
+formato = info.Format;
+disp(formato);
+disp(im(200,:));
+figure;
+plot(im(200,:));
+figure;
+roi = im(150:380, 150:400);
+imshow(roi);
+disp(size(roi));
